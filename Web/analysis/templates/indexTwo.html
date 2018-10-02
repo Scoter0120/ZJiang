@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/series-label.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <title>分析一</title>
+</head>
+<body>
+<div id="container1" style="max-width:100%;height:100%"></div>
+<div id="container2" style="max-width:100%;height:100%"></div>
+<div id="container3" style="max-width:100%;height:100%"></div>
+<div id="container4" style="max-width:100%;height:100%"></div>
+<div id="container5" style="max-width:100%;height:100%"></div>
+<div id="container6" style="max-width:100%;height:100%"></div>
+<div id="container" style="max-width:100%;height:100%"></div>
+<script>
+    var chart1 = Highcharts.chart('container1', {
+        title: {
+            text: '差1情况'
+        },
+        yAxis: {
+            title: {
+                text: '结果'
+            }
+        },
+        series: [{
+            name: '差1',
+            data: {{ cha1 }}
+        }]
+    });
+    var chart2 = Highcharts.chart('container2', {
+        title: {
+            text: '差2情况'
+        },
+        yAxis: {
+            title: {
+                text: '差'
+            }
+        },
+        series: [{
+            name: 'cha2',
+            data: {{ cha2 }}
+        }]
+    });
+    var chart3 = Highcharts.chart('container3', {
+        title: {
+            text: '差3情况'
+        },
+        yAxis: {
+            title: {
+                text: '差'
+            }
+        },
+        series: [{
+            name: '差3',
+            data: {{ cha3 }}
+        }]
+    });
+    var chart4 = Highcharts.chart('container4', {
+        title: {
+            text: '差4情况'
+        },
+        yAxis: {
+            title: {
+                text: '差'
+            }
+        },
+        series: [{
+            name: '差4',
+            data: {{ cha4 }}
+        }]
+    });
+    var chart5 = Highcharts.chart('container5', {
+        title: {
+            text: '差5情况'
+        },
+        yAxis: {
+            title: {
+                text: '差'
+            }
+        },
+        series: [{
+            name: '差5',
+            data: {{ cha5 }}
+        }]
+    });
+    var chart6 = Highcharts.chart('container6', {
+        title: {
+            text: '和情况'
+        },
+        yAxis: {
+            title: {
+                text: '和'
+            }
+        },
+        series: [{
+            name: '和',
+            data: {{ he }}
+        }]
+    });
+    var chart = Highcharts.chart('container', {
+        title: {
+            text: '积情况'
+        },
+        yAxis: {
+            title: {
+                text: '积'
+            }
+        },
+        series: [{
+            name: '积',
+            data: {{ ji }}
+        }]
+    });
+</script>
+</body>
+</html>

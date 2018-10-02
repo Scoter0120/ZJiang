@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a href="/analysis/one">分析一</a>
+</p>
+<p>
+    <a href="/analysis/two">分析二</a>
+</p>
+
+<div>
+    <table border="1">
+    <tr>
+        <th>期号</th>
+        <th>红球</th>
+        <th>篮球</th>
+    </tr>
+{% if sData_list %}
+    {% for info in sData_list %}
+        <tr>
+        <td>{{ info.DT }}</td>
+        <td>{{ info.RED_BALL }}</td>
+        <td>{{ info.BLUE_BALL }}</td>
+        </tr>
+    {% endfor %}
+{% else %}
+    <p>No sData are available.</p>
+{% endif %}
+</table>
+</div>
+</table>
+</body>
+</html>
